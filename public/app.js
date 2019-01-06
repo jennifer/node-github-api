@@ -9,7 +9,9 @@ function getDataFromApi(searchTerm, callback) {
 }
 
 /*
-function getDataFromApi() {
+// parse enteres url text to pull the user and repo
+
+function getDataFromApi(repo) {
     document.getElementById('gallery').innerHTML = '';
     return fetch('/', {
       method: 'GET',
@@ -22,8 +24,7 @@ function getDataFromApi() {
     })
     .then(function(data) {
       allWebsites = data;
-      renderGallery(data);
-      createTagsArray(data);
+      renderResult(data);
     })
     .catch(function() {
       console.log('API request error');
